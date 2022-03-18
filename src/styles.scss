@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+
+$general-border-radius: 3px;
+
+
+$main-color: rgba(120, 231, 222, 0.38);
+$light-main-color: #472f49;
+$secondary-color: rgba(2, 68, 62, 0.43);
+
+
+
+html {
+  background-color: $main-color;
+  color: $light-main-color;
+  font-family: "Hubballi", serif;
+}
+
+ * {
+  margin: 0;
+  padding: 0;
+}

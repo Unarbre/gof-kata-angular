@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gof-front": {
+    "app-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,12 +15,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "gof",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gof-front",
+            "outputPath": "dist/app-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gof-front:build:production"
+              "browserTarget": "app-front:build:production"
             },
             "development": {
-              "browserTarget": "gof-front:build:development"
+              "browserTarget": "app-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gof-front:build"
+            "browserTarget": "app-front:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "gof-front"
+  "defaultProject": "app-front"
 }
