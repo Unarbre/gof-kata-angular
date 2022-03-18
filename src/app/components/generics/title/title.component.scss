@@ -1,0 +1,10 @@
+@import "src/styles";
+
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  background-color: $secondary-color;
+  padding: 20px;
+  user-select: none;
+}

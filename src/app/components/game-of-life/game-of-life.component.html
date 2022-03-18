@@ -1,0 +1,22 @@
+
+<div class="game-of-life">
+  <div class="size-selectors">
+    <gof-size-selector text="Height"
+        (sizeUpdated)="this.updateHeight($event)"
+    ></gof-size-selector>
+
+    <gof-size-selector text="Length"
+                       (sizeUpdated)="this.updateLength($event)">
+
+    </gof-size-selector>
+
+  </div>
+  <div class="game-container">
+    <gof-cell-grid [cells]="cells"></gof-cell-grid>
+
+
+    <gof-run-button class="run-button"></gof-run-button>
+  </div>
+</div>
+
+

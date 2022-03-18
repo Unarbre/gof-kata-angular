@@ -1,0 +1,8 @@
+<div class="number-selector">
+  {{text}} :
+  <input
+    [(ngModel)]="value"
+    (ngModelChange)="emit()"
+    type="number"
+  class="number-input"/>
+</div>
