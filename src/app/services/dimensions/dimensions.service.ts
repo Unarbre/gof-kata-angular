@@ -9,7 +9,7 @@ export class DimensionsService {
   lengthChange: Subject<number> = new Subject<number>();
   heightChange: Subject<number> = new Subject<number>();
 
-  private length: number = 2;
+  private length: number = 3;
   private height: number = 2;
 
   constructor() {

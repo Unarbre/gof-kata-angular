@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Cell, STATUS} from "../../../../services/cells/cells.service";
+import {Cell} from "../../../../services/cells/cells.service";
+import {STATUS} from "../../../../services/cells/utils/cells-utils";
 
 
 @Component({

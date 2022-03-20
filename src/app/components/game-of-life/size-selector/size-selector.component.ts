@@ -39,8 +39,6 @@ export class SizeSelectorComponent implements OnInit {
   }
 
   isSizeValid(size: number): boolean {
-    if (this.numberService.isNegativeOrEqualZero(size)) return false;
-
-    return true;
+    return !this.numberService.isNegativeOrEqualZero(size);
   }
 }

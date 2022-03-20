@@ -1,5 +1,5 @@
 import {HeightUpdateStrategy} from "./height-update-strategy";
-import {Grid} from "../../cells.service";
+import {CellsUtils} from "../../utils/cells-utils";
 
 
 export class IncreaseHeightUpdateStrategy implements HeightUpdateStrategy {
@@ -11,7 +11,21 @@ export class IncreaseHeightUpdateStrategy implements HeightUpdateStrategy {
   }
 
   apply(cells: Grid): Grid {
-    return cells;
+    const firstLine = cells[0];
+
+    if (!firstLine) {
+      return cells;
+    }
+
+    const length = firstLine.length;
+
+    cells.push(...[...new Array(this.reduceAmount).keys()].map(
+      () => [...new Array(length).keys()].map(
+        () => CellsUtils.getRandomCell()
+      )
+    ));
+
+    return cells
   }
 
 }
