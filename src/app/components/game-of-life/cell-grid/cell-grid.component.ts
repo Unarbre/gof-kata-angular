@@ -9,21 +9,13 @@ import {CellsService} from "../../../services/cells/cells.service";
 })
 export class CellGridComponent implements OnInit {
 
-
   @Input()
   cells: Array<Array<string>> = [['x', 'x'], [".", "."]];
-
-  length: number = 2;
-  height: number = 2;
 
   constructor(private readonly dimensionsService: DimensionsService, private readonly cellsService: CellsService) { }
 
   ngOnInit(): void {
-    this.length = this.dimensionsService.getLength();
-    this.height = this.dimensionsService.getHeight();
 
-    this.dimensionsService.heightChange.asObservable().subscribe((height) => {})
-    this.dimensionsService.lengthChange.asObservable().subscribe((height) => {})
   }
 
   reverseStatus(x: number, y: number) {

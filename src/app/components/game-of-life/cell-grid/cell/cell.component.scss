@@ -1,0 +1,8 @@
+
+$cell-distance: 0.2em;
+
+.cell {
+  font-size: 18px;
+  padding: 0 $cell-distance $cell-distance;
+  width: 0.5em;
+}

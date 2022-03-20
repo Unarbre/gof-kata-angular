@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CellsService, STATUS} from "../../../../services/cells/cells.service";
+import {STATUS} from "../../../../services/cells/cells.service";
 
 
 @Component({
@@ -18,7 +18,7 @@ export class CellComponent implements OnInit {
 
 
 
-  constructor(private readonly cellsService : CellsService) {
+  constructor() {
   }
 
   ngOnInit(): void {
