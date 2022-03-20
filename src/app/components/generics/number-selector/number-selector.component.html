@@ -1,8 +1,8 @@
 <div class="number-selector">
-  {{text}} :
+  <span class="unselectable input-text">{{text}} : </span>
   <input
     [(ngModel)]="value"
-    (ngModelChange)="emit()"
+    (change)="emit()"
     type="number"
   class="number-input"/>
 </div>

@@ -1,3 +1,3 @@
-<div class="cell-line" *ngFor="let cell of cellLine">
-  <gof-cell [status]="cell"></gof-cell>
+<div  *ngFor="let cell of cellLine; let index = index;">
+  <gof-cell (statusReversed)="this.reverseStatus(index)" [status]="cell"></gof-cell>
 </div>

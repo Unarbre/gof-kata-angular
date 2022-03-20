@@ -1,4 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CellsService, STATUS} from "../../../../services/cells/cells.service";
+
+
+
 
 @Component({
   selector: 'gof-cell',
@@ -9,11 +13,20 @@ export class CellComponent implements OnInit {
 
 
   @Input()
-  status: string = "x";
+  status: string = STATUS.ALIVE;
 
-  constructor() { }
+  @Output()
+  statusReversed: EventEmitter<void> = new EventEmitter<void>();
+
+
+
+  constructor(private readonly cellsService : CellsService) {
+  }
 
   ngOnInit(): void {
   }
 
+  reverseStatus() {
+    this.statusReversed.emit();
+  }
 }

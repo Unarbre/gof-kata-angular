@@ -1,5 +1,8 @@
 <div class="size-selector">
-  <gof-number-selector (valueChanged)="this.updateSize($event)" [text]="text">
+  <gof-number-selector
+    (valueChanged)="this.updateSize($event)"
+    [text]="text"
+    [default]="2">
 
   </gof-number-selector>
 </div>

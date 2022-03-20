@@ -1,7 +1,7 @@
 
 <div class="cell-grid">
-  <div *ngFor="let line of cells">
-    <gof-cell-line [cellLine]="line"></gof-cell-line>
+  <div *ngFor="let line of cells; let index = index;" >
+    <gof-cell-line (statusReversed)="this.reverseStatus($event, index)" [cellLine]="line"></gof-cell-line>
   </div>
 </div>
 

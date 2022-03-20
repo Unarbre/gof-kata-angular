@@ -1,24 +1,33 @@
 import {Injectable} from '@angular/core';
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DimensionsService {
 
-  private length: number = 1;
-  private height: number = 1;
+  lengthChange: Subject<number> = new Subject<number>();
+  heightChange: Subject<number> = new Subject<number>();
+
+  private length: number = 2;
+  private height: number = 2;
 
   constructor() {
+    this.lengthChange.subscribe((value) => {
+      this.length = value
+    });
 
+    this.heightChange.subscribe((value) => {
+      this.height = value
+    });
   }
 
   updateHeight(newHeight: number): void {
-    this.height = newHeight;
+    this.heightChange.next(newHeight);
   }
 
   updateLength(newLength: number): void {
-
-    this.length = newLength;
+    this.lengthChange.next(newLength);
   }
 
   getLength(): number {

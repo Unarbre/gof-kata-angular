@@ -10,6 +10,8 @@ export class NumberSelectorComponent implements OnInit {
 
   @Input()
   text: string = "Numbers";
+  @Input()
+  default: number = 0;
 
   @Output()
   valueChanged: EventEmitter<number> = new EventEmitter<number>();
@@ -18,13 +20,15 @@ export class NumberSelectorComponent implements OnInit {
 
   previousValue: number = 0;
 
-  constructor(private readonly numbersService: NumbersService) { }
+  constructor(private readonly numbersService: NumbersService) {
+  }
 
   ngOnInit(): void {
+    this.value = this.default;
   }
 
   emit(): void {
-    if (this.numbersService.isNumeric(this.value)) {
+    if (this.value && this.numbersService.isNumeric(this.value)) {
       this.previousValue = this.value.valueOf();
 
       this.valueChanged.emit(this.value);
@@ -34,8 +38,7 @@ export class NumberSelectorComponent implements OnInit {
   }
 
   resetValueWith(resetValue: number) {
-    console.log(resetValue);
-      this.value = resetValue;
+    this.value = resetValue;
   }
 
 }

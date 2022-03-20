@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DimensionsService} from "../../../services/dimensions/dimensions.service";
+import {CellsService} from "../../../services/cells/cells.service";
 
 @Component({
   selector: 'gof-cell-grid',
@@ -9,19 +11,22 @@ export class CellGridComponent implements OnInit {
 
 
   @Input()
-  cells: Array<Array<string>> = [['x', 'x']];
+  cells: Array<Array<string>> = [['x', 'x'], [".", "."]];
 
-  @Input()
-  length: number = 1;
+  length: number = 2;
+  height: number = 2;
 
-
-  @Input()
-  height: number = 1;
-
-  constructor() { }
+  constructor(private readonly dimensionsService: DimensionsService, private readonly cellsService: CellsService) { }
 
   ngOnInit(): void {
+    this.length = this.dimensionsService.getLength();
+    this.height = this.dimensionsService.getHeight();
 
+    this.dimensionsService.heightChange.asObservable().subscribe((height) => {})
+    this.dimensionsService.lengthChange.asObservable().subscribe((height) => {})
   }
 
+  reverseStatus(x: number, y: number) {
+    this.cellsService.updateAt({x, y})
+  }
 }

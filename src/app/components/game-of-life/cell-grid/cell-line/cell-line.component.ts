@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'gof-cell-line',
@@ -8,11 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CellLineComponent implements OnInit {
 
   @Input()
-  cellLine: Array<string> = ["x"];
+  cellLine: Array<string> = ["x", "x"];
 
-  constructor() { }
+  @Output()
+  statusReversed: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  reverseStatus(index: number) {
+    this.statusReversed.emit(index);
+  }
 }
