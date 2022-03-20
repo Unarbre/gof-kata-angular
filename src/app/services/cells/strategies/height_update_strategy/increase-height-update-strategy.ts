@@ -1,4 +1,5 @@
 import {HeightUpdateStrategy} from "./height-update-strategy";
+import {Grid} from "../../cells.service";
 
 
 export class IncreaseHeightUpdateStrategy implements HeightUpdateStrategy {
@@ -9,7 +10,7 @@ export class IncreaseHeightUpdateStrategy implements HeightUpdateStrategy {
     this.reduceAmount = reduceAmount;
   }
 
-  apply(cells: Array<Array<string>>): Array<Array<string>> {
+  apply(cells: Grid): Grid {
     return cells;
   }
 

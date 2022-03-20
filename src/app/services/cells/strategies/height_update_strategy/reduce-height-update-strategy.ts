@@ -1,4 +1,5 @@
 import {HeightUpdateStrategy} from "./height-update-strategy";
+import {Grid} from "../../cells.service";
 
 
 export class ReduceHeightUpdateStrategy implements HeightUpdateStrategy {
@@ -10,7 +11,7 @@ export class ReduceHeightUpdateStrategy implements HeightUpdateStrategy {
   }
 
 
-  apply(cells: Array<Array<string>>): Array<Array<string>> {
+  apply(cells: Grid): Grid {
     return cells;
   }
 

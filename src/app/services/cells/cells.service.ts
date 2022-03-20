@@ -10,12 +10,16 @@ export enum STATUS {
   DEAD = ".",
 }
 
+export type Cell = string;
+export type Line = Array<Cell>;
+export type Grid = Array<Line>;
+
 @Injectable({
   providedIn: 'root'
 })
 export class CellsService {
 
-  public cells: Array<Array<string>> = [];
+  public cells: Grid = [];
 
   length: number = this.dimensionsService.getLength();
   height: number = this.dimensionsService.getHeight();

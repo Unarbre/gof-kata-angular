@@ -1,6 +1,7 @@
+import { Grid } from "../../cells.service";
 
 
 
 export interface HeightUpdateStrategy {
-  apply(cells: Array<Array<string>>): Array<Array<string>>;
+  apply(cells: Grid): Grid;
 }

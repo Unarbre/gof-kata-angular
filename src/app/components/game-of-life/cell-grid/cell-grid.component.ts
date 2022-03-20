@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DimensionsService} from "../../../services/dimensions/dimensions.service";
-import {CellsService} from "../../../services/cells/cells.service";
+import {CellsService, Grid} from "../../../services/cells/cells.service";
 
 @Component({
   selector: 'gof-cell-grid',
@@ -10,7 +10,7 @@ import {CellsService} from "../../../services/cells/cells.service";
 export class CellGridComponent implements OnInit {
 
   @Input()
-  cells: Array<Array<string>> = [['x', 'x'], [".", "."]];
+  cells: Grid = [['x', 'x'], [".", "."]];
 
   constructor(private readonly dimensionsService: DimensionsService, private readonly cellsService: CellsService) { }
 

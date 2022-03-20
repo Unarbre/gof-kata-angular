@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {STATUS} from "../../../../services/cells/cells.service";
+import {Cell, STATUS} from "../../../../services/cells/cells.service";
 
 
 @Component({
@@ -11,7 +11,7 @@ export class CellComponent implements OnInit {
 
 
   @Input()
-  status: string = STATUS.ALIVE;
+  status: Cell = STATUS.ALIVE;
 
   @Output()
   statusReversed: EventEmitter<void> = new EventEmitter<void>();
