@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DimensionsService} from "../../services/dimensions/dimensions.service";
 import {CellsService} from "../../services/cells/cells.service";
 

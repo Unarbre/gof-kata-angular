@@ -2,8 +2,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CellsService, STATUS} from "../../../../services/cells/cells.service";
 
 
-
-
 @Component({
   selector: 'gof-cell',
   templateUrl: './cell.component.html',
