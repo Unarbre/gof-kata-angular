@@ -12,6 +12,7 @@ export class ReduceLengthUpdateStrategy implements LengthUpdateStrategy {
 
 
   apply(cells: Grid): Grid {
+    cells.map(line => line.splice(line.length - this.reduceAmount, this.reduceAmount))
     return cells;
   }
 

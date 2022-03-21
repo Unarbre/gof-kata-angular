@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {NumbersService} from "../../../services/numbers/numbers.service";
+import {NumbersUtils} from "../../../services/numbers/numbersUtils";
 
 @Component({
   selector: 'gof-number-selector',
@@ -21,7 +21,7 @@ export class NumberSelectorComponent implements OnInit {
 
   previousValue: number = 0;
 
-  constructor(private readonly numbersService: NumbersService) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class NumberSelectorComponent implements OnInit {
   }
 
   emit(): void {
-    if (this.value && this.numbersService.isNumeric(this.value)) {
+    if (this.value && NumbersUtils.isNumeric(this.value)) {
       this.previousValue = this.value.valueOf();
 
       this.valueChanged.emit(this.value);

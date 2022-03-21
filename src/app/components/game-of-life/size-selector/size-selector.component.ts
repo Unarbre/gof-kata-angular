@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild, } from '@angular/core';
-import {NumbersService} from "../../../services/numbers/numbers.service";
+import {NumbersUtils} from "../../../services/numbers/numbersUtils";
 import {NumberSelectorComponent} from "../../generics/number-selector/number-selector.component";
 
 @Component({
@@ -14,7 +14,7 @@ export class SizeSelectorComponent implements OnInit {
 
   @Input()
   startingValue: number = 2;
-  
+
   @Output()
   sizeUpdated: EventEmitter<number> = new EventEmitter<number>();
 
@@ -23,7 +23,7 @@ export class SizeSelectorComponent implements OnInit {
 
   value: number = 1;
 
-  constructor(private readonly numberService: NumbersService) {
+  constructor() {
 
   }
 
@@ -40,6 +40,6 @@ export class SizeSelectorComponent implements OnInit {
   }
 
   isSizeValid(size: number): boolean {
-    return !this.numberService.isNegativeOrEqualZero(size);
+    return !NumbersUtils.isNegativeOrEqualZero(size);
   }
 }
