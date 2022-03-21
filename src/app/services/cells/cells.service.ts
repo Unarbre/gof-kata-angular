@@ -6,6 +6,7 @@ import {CellsUtils, STATUS} from "./utils/cells-utils";
 import {
   LengthUpdateStrategyFactory
 } from "./strategies/width-update-strategy/factory/length-update-strategy-factory.service";
+import {GenerationHttpService} from "../http/generation/generation-http.service";
 
 
 export type Cell = string;
@@ -24,7 +25,8 @@ export class CellsService {
 
   constructor(private readonly dimensionsService: DimensionsService,
               private readonly heightUpdateStrategyFactory: HeightUpdateStrategyFactory,
-              private readonly lengthUpdateStrategyFactory: LengthUpdateStrategyFactory
+              private readonly lengthUpdateStrategyFactory: LengthUpdateStrategyFactory,
+              private readonly generationHttpService: GenerationHttpService,
   ) {
     this.randomize();
     this.handleSizeChanges();
@@ -59,5 +61,15 @@ export class CellsService {
       this.cells = lengthUpdateStrategy.apply(this.cells);
       this.length = length;
     });
+  }
+
+  nextGeneration(): void {
+    this.generationHttpService.postAtoA(
+      {
+        length: this.length,
+        height: this.height,
+        cells: this.cells,
+      }
+    ).subscribe(generation => {this.cells = generation.cells})
   }
 }

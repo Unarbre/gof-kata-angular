@@ -3,7 +3,7 @@ import {DimensionsService} from "../../services/dimensions/dimensions.service";
 import {CellsService, Grid} from "../../services/cells/cells.service";
 
 @Component({
-  selector: 'gof-game-of-life',
+  selector: 'gof-generation',
   templateUrl: './game-of-life.component.html',
   styleUrls: ['./game-of-life.component.scss']
 })
@@ -29,5 +29,9 @@ export class GameOfLifeComponent implements OnInit {
 
   updateHeight(newHeight: number): void {
     this.dimensionService.updateHeight(newHeight);
+  }
+
+  getNextGeneration() {
+    this.cellsService.nextGeneration();
   }
 }

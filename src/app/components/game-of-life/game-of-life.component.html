@@ -16,7 +16,7 @@
     <gof-cell-grid [cells]="cells"></gof-cell-grid>
 
 
-    <gof-run-button class="run-button"></gof-run-button>
+    <gof-run-button (clicked)="this.getNextGeneration()" class="run-button"></gof-run-button>
   </div>
 </div>
 
