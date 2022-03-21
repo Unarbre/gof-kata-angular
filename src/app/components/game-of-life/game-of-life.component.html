@@ -3,12 +3,13 @@
   <div class="size-selectors">
     <gof-size-selector text="Height"
         (sizeUpdated)="this.updateHeight($event)"
+                       [startingValue]="gridHeight"
     ></gof-size-selector>
 
     <gof-size-selector text="Length"
-                       (sizeUpdated)="this.updateLength($event)">
-
-    </gof-size-selector>
+                       (sizeUpdated)="this.updateLength($event)"
+                       [startingValue]="gridLength"
+    ></gof-size-selector>
 
   </div>
   <div class="game-container">

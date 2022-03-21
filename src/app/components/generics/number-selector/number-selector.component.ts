@@ -10,6 +10,7 @@ export class NumberSelectorComponent implements OnInit {
 
   @Input()
   text: string = "Numbers";
+
   @Input()
   default: number = 0;
 

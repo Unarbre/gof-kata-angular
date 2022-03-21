@@ -12,6 +12,9 @@ export class SizeSelectorComponent implements OnInit {
   @Input()
   text: string = "Size";
 
+  @Input()
+  startingValue: number = 2;
+  
   @Output()
   sizeUpdated: EventEmitter<number> = new EventEmitter<number>();
 
@@ -32,8 +35,6 @@ export class SizeSelectorComponent implements OnInit {
       this.value = newSize;
       this.sizeUpdated.emit(newSize);
     } else {
-      console.log(this.value);
-
       this.numberSelector.resetValueWith(this.value)
     }
   }

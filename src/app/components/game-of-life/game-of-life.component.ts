@@ -11,6 +11,9 @@ export class GameOfLifeComponent implements OnInit {
 
   cells: Grid = this.cellsService.cells;
 
+  gridHeight: number = this.dimensionService.getHeight();
+  gridLength: number = this.dimensionService.getLength();
+
   constructor(
     private readonly dimensionService: DimensionsService,
     private readonly cellsService: CellsService,

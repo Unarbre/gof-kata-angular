@@ -12,6 +12,8 @@ export class ReduceHeightUpdateStrategy implements HeightUpdateStrategy {
 
 
   apply(cells: Grid): Grid {
+    cells.splice(cells.length - this.reduceAmount, this.reduceAmount);
+
     return cells;
   }
 
