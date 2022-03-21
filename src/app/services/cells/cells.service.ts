@@ -3,6 +3,9 @@ import {Coordonates} from "./models/coordonates.model";
 import {DimensionsService} from "../dimensions/dimensions.service";
 import {HeightUpdateStrategyFactory} from "./strategies/height_update_strategy/factory/height-update-strategy.factory";
 import {CellsUtils, STATUS} from "./utils/cells-utils";
+import {
+  LengthUpdateStrategyFactory
+} from "./strategies/width-update-strategy/factory/length-update-strategy-factory.service";
 
 
 export type Cell = string;
@@ -20,7 +23,8 @@ export class CellsService {
   height: number = this.dimensionsService.getHeight();
 
   constructor(private readonly dimensionsService: DimensionsService,
-              private readonly heightUpdateStrategyFactory: HeightUpdateStrategyFactory
+              private readonly heightUpdateStrategyFactory: HeightUpdateStrategyFactory,
+              private readonly lengthUpdateStrategyFactory: LengthUpdateStrategyFactory
   ) {
     this.randomize();
     this.handleSizeChanges();
@@ -51,10 +55,8 @@ export class CellsService {
 
 
     this.dimensionsService.lengthChange.asObservable().subscribe((length) => {
-
-
-
-
+      const lengthUpdateStrategy = this.lengthUpdateStrategyFactory.get(this.length, length);
+      this.cells = lengthUpdateStrategy.apply(this.cells);
       this.length = length;
     });
   }

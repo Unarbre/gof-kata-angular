@@ -12,8 +12,6 @@ export class IncreaseHeightUpdateStrategy implements HeightUpdateStrategy {
   }
 
   apply(cells: Grid): Grid {
-
-    console.log(this.increaseAmount);
     const firstLine = cells[0];
 
     if (!firstLine) {
