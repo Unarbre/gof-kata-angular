@@ -2,7 +2,7 @@ import {EnumsService} from "../../enums/enums.service";
 
 
 export enum STATUS {
-  ALIVE = "o",
+  ALIVE = "x",
   DEAD = ".",
 }
 

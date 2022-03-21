@@ -48,6 +48,11 @@ export class CellsService {
         : STATUS.ALIVE;
   }
 
+  updateWith(grid: Grid): void {
+    this.cells.length = 0
+    this.cells.push(...grid);
+  }
+
   private handleSizeChanges() {
     this.dimensionsService.heightChange.asObservable().subscribe((height) => {
       const heightUpdateStrategy = this.heightUpdateStrategyFactory.get(this.height, height);
@@ -70,6 +75,8 @@ export class CellsService {
         height: this.height,
         cells: this.cells,
       }
-    ).subscribe(generation => {this.cells = generation.cells})
+    ).subscribe(generation => {
+      this.updateWith(generation.cells);
+    })
   }
 }

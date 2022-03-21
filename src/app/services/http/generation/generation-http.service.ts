@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BaseHttpService} from "../base-http.service";
 import {Generation} from "./models/generation";
 import {HttpClient} from "@angular/common/http";
@@ -13,10 +13,8 @@ export class GenerationHttpService implements BaseHttpService<Generation> {
   }
 
   postAtoA(entity: Generation): Observable<Generation> {
-    return this.httpClient.post<Generation>("http://localhost:8080/generations/next", {entity});
+    return this.httpClient.post<Generation>("http://localhost:8081/generations/next", entity);
   }
-
-
 
 
 }
