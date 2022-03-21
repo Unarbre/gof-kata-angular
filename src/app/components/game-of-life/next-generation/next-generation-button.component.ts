@@ -1,11 +1,11 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'gof-run-button',
-  templateUrl: './run-button.component.html',
-  styleUrls: ['./run-button.component.scss']
+  selector: 'gof-next-generation',
+  templateUrl: './next-generation-button.component.html',
+  styleUrls: ['./next-generation-button.component.scss']
 })
-export class RunButtonComponent implements OnInit {
+export class NextGenerationButtonComponent implements OnInit {
 
   @Output()
   clicked: EventEmitter<void> = new EventEmitter<void>();

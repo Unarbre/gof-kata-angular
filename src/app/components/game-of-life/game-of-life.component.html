@@ -1,12 +1,12 @@
 
 <div class="game-of-life">
   <div class="size-selectors">
-    <gof-size-selector text="Height"
+    <gof-size-selector text="Length"
         (sizeUpdated)="this.updateHeight($event)"
                        [startingValue]="gridHeight"
     ></gof-size-selector>
 
-    <gof-size-selector text="Length"
+    <gof-size-selector text="Height"
                        (sizeUpdated)="this.updateLength($event)"
                        [startingValue]="gridLength"
     ></gof-size-selector>
@@ -16,7 +16,7 @@
     <gof-cell-grid [cells]="cells"></gof-cell-grid>
 
 
-    <gof-run-button (clicked)="this.getNextGeneration()" class="run-button"></gof-run-button>
+    <gof-next-generation (clicked)="this.getNextGeneration()" class="run-button"></gof-next-generation>
   </div>
 </div>
 

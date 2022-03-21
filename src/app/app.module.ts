@@ -9,7 +9,7 @@ import { CellComponent } from './components/game-of-life/cell-grid/cell/cell.com
 import { CellLineComponent } from './components/game-of-life/cell-grid/cell-line/cell-line.component';
 import { ButtonComponent } from './components/generics/button/button.component';
 import { NumberSelectorComponent } from './components/generics/number-selector/number-selector.component';
-import { RunButtonComponent } from './components/game-of-life/run-button/run-button.component';
+import { NextGenerationButtonComponent } from './components/game-of-life/next-generation/next-generation-button.component';
 import { SizeSelectorComponent } from './components/game-of-life/size-selector/size-selector.component';
 import { TitleComponent } from './components/generics/title/title.component';
 import { HeaderComponent } from './components/structures/header/header.component';
@@ -25,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     CellLineComponent,
     ButtonComponent,
     NumberSelectorComponent,
-    RunButtonComponent,
+    NextGenerationButtonComponent,
     SizeSelectorComponent,
     TitleComponent,
     HeaderComponent,

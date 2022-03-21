@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RunButtonComponent } from './run-button.component';
+import { NextGenerationButtonComponent } from './next-generation-button.component';
 
 describe('RunButtonComponent', () => {
-  let component: RunButtonComponent;
-  let fixture: ComponentFixture<RunButtonComponent>;
+  let component: NextGenerationButtonComponent;
+  let fixture: ComponentFixture<NextGenerationButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RunButtonComponent ]
+      declarations: [ NextGenerationButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RunButtonComponent);
+    fixture = TestBed.createComponent(NextGenerationButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
