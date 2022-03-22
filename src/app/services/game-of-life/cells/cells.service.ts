@@ -28,15 +28,15 @@ export class CellsService {
               private readonly lengthUpdateStrategyFactory: LengthUpdateStrategyFactory,
               private readonly generationHttpService: GenerationHttpService,
   ) {
-    this.randomize();
+    this.shuffle();
     this.handleSizeChanges();
   }
 
 
-  randomize(): void {
-    this.cells = [...new Array(this.height).keys()]
+  public shuffle(): void {
+    this.updateWith([...new Array(this.height).keys()]
       .map(() => [...new Array(this.length).keys()]
-        .map(() => CellsUtils.getRandomCell()));
+        .map(() => CellsUtils.getRandomCell())));
   }
 
 

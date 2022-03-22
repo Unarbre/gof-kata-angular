@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/structures/header/header.component
 import {FormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { RunButtonComponent } from './components/game-of-life/run-button/run-button.component';
+import { ShuffleButtonComponent } from './components/game-of-life/shuffle-button/shuffle-button.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RunButtonComponent } from './components/game-of-life/run-button/run-but
     TitleComponent,
     HeaderComponent,
     RunButtonComponent,
+    ShuffleButtonComponent,
   ],
   imports: [
     BrowserModule,
