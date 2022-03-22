@@ -13,13 +13,6 @@ export class DimensionsService {
   private height: number = 2;
 
   constructor() {
-    this.lengthChange.subscribe((value) => {
-      this.length = value
-    });
-
-    this.heightChange.subscribe((value) => {
-      this.height = value
-    });
   }
 
   updateHeight(newHeight: number): void {

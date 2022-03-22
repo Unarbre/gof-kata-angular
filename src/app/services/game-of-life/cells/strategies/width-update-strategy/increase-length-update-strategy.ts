@@ -1,7 +1,7 @@
 import {LengthUpdateStrategy} from "./length-update-strategy";
 import {CellsUtils} from "../../utils/cells-utils";
 import {Grid} from "../../cells.service";
-import {NumbersUtils} from "../../../numbers/numbersUtils";
+import {NumbersUtils} from "../../../../numbers/numbersUtils";
 
 
 export class IncreaseLengthUpdateStrategy implements LengthUpdateStrategy {

@@ -6,7 +6,7 @@ import {CellsUtils, STATUS} from "./utils/cells-utils";
 import {
   LengthUpdateStrategyFactory
 } from "./strategies/width-update-strategy/factory/length-update-strategy-factory.service";
-import {GenerationHttpService} from "../http/generation/generation-http.service";
+import {GenerationHttpService} from "../../resources/generation/generation-http.service";
 
 
 export type Cell = string;

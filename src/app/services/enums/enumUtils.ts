@@ -1,4 +1,4 @@
-export class EnumsService {
+export class EnumUtils {
 
   constructor() {
 

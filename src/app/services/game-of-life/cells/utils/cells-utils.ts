@@ -1,4 +1,4 @@
-import {EnumsService} from "../../enums/enums.service";
+import {EnumUtils} from "../../../enums/enumUtils";
 
 
 export enum STATUS {
@@ -8,6 +8,6 @@ export enum STATUS {
 
 export class CellsUtils {
   static getRandomCell() {
-    return EnumsService.randomEnum(STATUS);
+    return EnumUtils.randomEnum(STATUS);
   }
 }

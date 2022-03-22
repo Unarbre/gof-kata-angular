@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnumUtils } from './enumUtils';
+import { RunnerService } from './runner.service';
 
-describe('EnumsService', () => {
-  let service: EnumUtils;
+describe('RunnerService', () => {
+  let service: RunnerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EnumUtils);
+    service = TestBed.inject(RunnerService);
   });
 
   it('should be created', () => {

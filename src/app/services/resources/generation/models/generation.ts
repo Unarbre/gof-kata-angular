@@ -1,4 +1,4 @@
-import {Grid} from "../../../cells/cells.service";
+import {Grid} from "../../../game-of-life/cells/cells.service";
 import {Entity} from "../../../structures/entity";
 
 

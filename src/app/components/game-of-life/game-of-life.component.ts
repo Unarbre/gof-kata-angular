@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DimensionsService} from "../../services/dimensions/dimensions.service";
-import {CellsService, Grid} from "../../services/cells/cells.service";
+import {DimensionsService} from "../../services/game-of-life/dimensions/dimensions.service";
+import {CellsService, Grid} from "../../services/game-of-life/cells/cells.service";
 
 @Component({
   selector: 'gof-generation',

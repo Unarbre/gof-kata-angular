@@ -15,6 +15,7 @@ import { TitleComponent } from './components/generics/title/title.component';
 import { HeaderComponent } from './components/structures/header/header.component';
 import {FormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
+import { RunButtonComponent } from './components/game-of-life/run-button/run-button.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     SizeSelectorComponent,
     TitleComponent,
     HeaderComponent,
+    RunButtonComponent,
   ],
   imports: [
     BrowserModule,

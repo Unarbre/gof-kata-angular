@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Line} from "../../../../services/cells/cells.service";
+import {Line} from "../../../../services/game-of-life/cells/cells.service";
 
 @Component({
   selector: 'gof-cell-line',

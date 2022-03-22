@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DimensionsService} from "../../../services/dimensions/dimensions.service";
-import {CellsService, Grid} from "../../../services/cells/cells.service";
-import {STATUS} from "../../../services/cells/utils/cells-utils";
+import {DimensionsService} from "../../../services/game-of-life/dimensions/dimensions.service";
+import {CellsService, Grid} from "../../../services/game-of-life/cells/cells.service";
+import {STATUS} from "../../../services/game-of-life/cells/utils/cells-utils";
 
 @Component({
   selector: 'gof-cell-grid',
