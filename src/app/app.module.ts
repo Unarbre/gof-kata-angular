@@ -12,7 +12,7 @@ import { NumberSelectorComponent } from './components/generics/number-selector/n
 import { NextGenerationButtonComponent } from './components/game-of-life/next-generation/next-generation-button.component';
 import { SizeSelectorComponent } from './components/game-of-life/size-selector/size-selector.component';
 import { TitleComponent } from './components/generics/title/title.component';
-import { HeaderComponent } from './components/structures/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import {FormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { RunButtonComponent } from './components/game-of-life/run-button/run-button.component';
