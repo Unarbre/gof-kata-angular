@@ -12,3 +12,9 @@
 .game-container {
   text-align: center;
 }
+
+
+.buttons > * {
+  display: inline-block;
+  margin-right: 0.5em;
+}
